@@ -1,11 +1,9 @@
-
-<!-- saved from url=(0075)https://raw.github.com/gpdowning/cs378/master/projects/collatz/makefile.c++ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css"></style></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;">all:
+all:
 	make run
 	make test
 
 diff: RunCollatz
-	RunCollatz &lt; RunCollatz.in &gt; RunCollatz.tmp
+	RunCollatz < RunCollatz.in > RunCollatz.tmp
 	diff RunCollatz.out RunCollatz.tmp
 	rm RunCollatz.tmp
 
@@ -13,16 +11,16 @@ doc:
 	doxygen Doxyfile
 
 log:
-	git log &gt; Collatz.log
+	git log > Collatz.log
 
 RunCollatz: Collatz.h Collatz.c++ RunCollatz.c++
 	g++ -pedantic -std=c++0x -Wall Collatz.c++ RunCollatz.c++ -o RunCollatz
 
 run: RunCollatz
-	RunCollatz &lt; RunCollatz.in
+	RunCollatz < RunCollatz.in
 
 runv: RunCollatz
-	valgrind RunCollatz &lt; RunCollatz.in
+	valgrind RunCollatz < RunCollatz.in
 
 TestCollatz: Collatz.h Collatz.c++ TestCollatz.c++
 	g++ -pedantic -std=c++0x -Wall Collatz.c++ TestCollatz.c++ -o TestCollatz -lcppunit -ldl
@@ -53,4 +51,3 @@ clean:
 	rm -f RunCollatz
 	rm -f TestCollatz
 	rm -f *.tmp
-</pre></body></html>
