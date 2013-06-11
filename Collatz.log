@@ -1,0 +1,53 @@
+commit 358aafe4d58e494ac5271078ed143ce38311b4bf
+Author: RyanDS <rdspring1@gmail.com>
+Date:   Tue Jun 11 04:46:58 2013 -0500
+
+    Fix Unit Test and makefile
+
+commit 3fd9e2cda6d6cca56f194992c188f72ba6f9b7ba
+Author: rdspring <rdspring1@gmail.com>
+Date:   Mon Jun 10 19:30:48 2013 -0500
+
+    Redesign cache for better unit testing
+
+commit e6b0acab4657c41263b5687fd5b15e7e87fb0bb6
+Author: rdspring <rdspring1@gmail.com>
+Date:   Mon Jun 10 19:07:21 2013 -0500
+
+    Implement Eager Cache Design
+
+commit c7c9ce339ef3487bc79f8eb8ed407b1ffe02bb0d
+Author: rdspring <rdspring1@gmail.com>
+Date:   Mon Jun 10 18:46:45 2013 -0500
+
+    Add Acceptance Test Generator
+
+commit 9a305db8c3d2284b25861ffb86376c345dcc8b8e
+Author: rdspring <rdspring1@gmail.com>
+Date:   Mon Jun 10 18:43:20 2013 -0500
+
+    Create Unit Tests and Acceptance Tests for Collatz
+
+commit d3207aa121e6ab51db84c65c0cb6c20fb8cb9d3d
+Author: rdspring <rdspring1@gmail.com>
+Date:   Mon Jun 10 18:14:42 2013 -0500
+
+    Create Sphere Collatz c file
+
+commit 69cf9cf634c725f4f37f888b257b44901aa25453
+Author: unknown <rdspring@RDSPRING-MOBL1.amr.corp.intel.com>
+Date:   Mon Jun 10 17:36:26 2013 -0500
+
+    Program naive collatz program; Fix skeleton errors
+
+commit f62d06e5249df4f443ed1a72d1703a5fec9d025a
+Author: unknown <rdspring@RDSPRING-MOBL1.amr.corp.intel.com>
+Date:   Mon Jun 10 17:21:50 2013 -0500
+
+    Add Skeleton Collatz
+
+commit 41d1352d34c646d7b9f2b954338b74580f616342
+Author: rdspring1 <rdspring1@gmail.com>
+Date:   Mon Jun 10 09:09:25 2013 -0700
+
+    Initial commit
