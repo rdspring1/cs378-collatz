@@ -26,7 +26,7 @@ TestCollatz: Collatz.h Collatz.c++ TestCollatz.c++
 	g++ -pedantic -std=c++0x -Wall Collatz.c++ TestCollatz.c++ -o TestCollatz -lcppunit -ldl
 
 test: TestCollatz
-	./TestCollatz
+	./TestCollatz > TestCollatz.out
 
 testv: TestCollatz
 	valgrind ./TestCollatz
