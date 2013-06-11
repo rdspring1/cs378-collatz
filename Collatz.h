@@ -66,20 +66,24 @@ void collatz_solve (std::istream&, std::ostream&);
 // ------------
 
 /**
- * @param cache - an eager cache of cycle lengths
+ * @param cache - the cache storing the cycle lengths for the integers 1 through n inclusive. 
+ * n is the upper-bound for the array and the largest integer stored in the array
+ * @param size - size of the parameter, main_cache
  * @param n - current integer
  * @return the cycle length of the integer n
  */
-int cycle(int cache [], int n);
+int cycle(int [], int, int);
 
 // ------------
 // init_cache
 // ------------
 
 /**
- * @param cache - a reference to the cache array
- * Initialize the cache for the value 1 through 100000
+ * @param cache - an array that will contain the precomputed cycle lengths for the integers 1 through n
+ * @param size - size of the parameter, cache
+ * n is the upper-bound for the array and the largest integer stored in the array
+ * Initialize the cache for the value 1 through n
  */
-void init_cache (int cache []);
+void init_cache (int[], int);
 
 #endif // Collatz_h

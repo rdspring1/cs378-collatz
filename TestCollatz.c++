@@ -217,6 +217,55 @@ struct TestCollatz : CppUnit::TestFixture {
         std::ostringstream w;
         collatz_solve(r, w);
         CPPUNIT_ASSERT(w.str() == "10 100 119\n50 100 119\n57967 60000 304\n");}
+		
+	// ----
+	// init_cache
+	// ----
+
+	void testCache_six() {
+		int cache_size = 6;
+		int main_cache [6] = { 0 };
+		init_cache(main_cache, cache_size);
+
+		int test [6] = {0, 1, 2, 8, 3, 6};
+
+		for(int i = 0; i < cache_size; i++) {
+			if(main_cache[i] != test[i]) {
+				CPPUNIT_ASSERT(false);
+			}
+		}
+		CPPUNIT_ASSERT(true);
+	}
+
+	void testCache_eleven() {
+		int cache_size = 11;
+		int main_cache [11] = { 0 };
+		init_cache(main_cache, cache_size);
+
+		int test [11] = {0, 1, 2, 8, 3, 6, 9, 17, 4, 20, 7};
+
+		for(int i = 0; i < cache_size; i++) {
+			if(main_cache[i] != test[i]) {
+				CPPUNIT_ASSERT(false);
+			}
+		}
+		CPPUNIT_ASSERT(true);
+	}
+
+	void testCache_two() {
+		int cache_size = 2;
+		int main_cache [2] = { 0 };
+		init_cache(main_cache, cache_size);
+
+		int test [2] = {0, 1};
+
+		for(int i = 0; i < cache_size; i++) {
+			if(main_cache[i] != test[i]) {
+				CPPUNIT_ASSERT(false);
+			}
+		}
+		CPPUNIT_ASSERT(true);
+	}
 
     // -----
     // suite
@@ -245,6 +294,9 @@ struct TestCollatz : CppUnit::TestFixture {
     CPPUNIT_TEST(test_solve_large);
     CPPUNIT_TEST(test_solve_medium);
     CPPUNIT_TEST(test_solve_random);
+	CPPUNIT_TEST(testCache_six);
+    CPPUNIT_TEST(testCache_eleven);
+    CPPUNIT_TEST(testCache_two);
     CPPUNIT_TEST_SUITE_END();
 };
 
