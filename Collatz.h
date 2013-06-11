@@ -61,4 +61,25 @@ void collatz_print (std::ostream&, int, int, int);
  */
 void collatz_solve (std::istream&, std::ostream&);
 
+// ------------
+// cycle
+// ------------
+
+/**
+ * @param cache - an eager cache of cycle lengths
+ * @param n - current integer
+ * @return the cycle length of the integer n
+ */
+int cycle(int cache [], int n);
+
+// ------------
+// init_cache
+// ------------
+
+/**
+ * @param cache - a reference to the cache array
+ * Initialize the cache for the value 1 through 100000
+ */
+void init_cache (int cache []);
+
 #endif // Collatz_h
